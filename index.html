@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Sum</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+<body>
+
+    
+
+
+    <div>
+        <tr>
+        <td>Sending Amount</td>
+    <td><input class="txt" type="text" name="txt" id = "num1"/></td>
+
+
+    <td>Charge</td>
+    <td><input class="txt" type="text" name="txt" id = "num2"/></td>
+
+
+    <td>Total Amount</td>
+    <td><input class="txt" type="text" name="txt" id = "subt"/></td>
+</tr>
+    </div>
+
+    
+     <script type="text/javascript">
+
+
+$(document).ready(function() {
+    //this calculates values automatically 
+    sum();
+    $("#num1, #num2").on("keydown keyup",sum);
+});
+ 
+function sum(){
+$("#sum").val(Number($("#num1").val())+Number($("#num2").val()));
+$("#subt").val(Number($("#num1").val())-Number($("#num2").val()));
+}
+
+
+
+</script>
+
+</body>
+</html>
